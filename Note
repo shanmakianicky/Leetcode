@@ -1,0 +1,20 @@
+Remove Duplicates From Sorted Array:
+    两个变量，i和j。 i循环整个数组，j的大小代表筛选后的数组的最后一个量的index。
+like: Remove Element;
+
+Two Sum:
+    number1 + number2 = target, number2 = target - number1; 所以把for遍历过的number1，用target减，
+获得目标值，然后存入map，在之后的遍历中寻找目标值即可。O(nlogn)。
+
+Search Insert Position:
+    一个简单for loop就可以实现O(n)的解答。最优解是利用Arrays的binarySearch方法，就是二分法，复杂度为O(logn)。如果
+这个方法在数组里找不到target，则会返回(-(insertion point) - 1)，insert point是target在数组中的插入点。
+    https://docs.oracle.com/javase/7/docs/api/java/util/Arrays.html#binarySearch(byte[],%20byte)
+
+Maximum Subarray:
+    Kadane's algorithm. O(n). 从第二个元素开始遍历数组，以第i个元素结尾的最大子数组要么是以第i-1个元素结尾的最大子数组加上
+第i个元素，要么是第i个元素，取其最大值即为currentMax。和totalMax作比较，把较大的赋值给totalMax即可。
+    分治：写的太复杂，还需要优化。
+
+Plus One:
+    这种辣鸡问题我真的不想再练一遍了。
