@@ -18,3 +18,12 @@ Maximum Subarray:
 
 Plus One:
     这种辣鸡问题我真的不想再练一遍了。
+
+Add two numbers:
+需要复习一下LinkedList.
+
+Longest Substring without repeating characters:
+用hashmap的思路是，用i遍历每个字符，并将其存入map，如果当前字符在map出现过，则将j往这个字符后一个index移动（如果j已经被移到这个字符
+后一个index之后的index了，那就不用管j了），以此来表示新字符的开始index。
+还可以用Kadane's Algorithm, 需要试一遍。https://discuss.leetcode.com/topic/8232/11-line-simple-java-solution-o-n-with-explanation
+
