@@ -1,4 +1,4 @@
-package Leetcode;
+package Leetcode.RemoveNthNodeFromEndOfList;
 
 public class RemoveNthNodeFromEndofList {
     public static class ListNode {
