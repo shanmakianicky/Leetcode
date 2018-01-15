@@ -6,7 +6,8 @@ import java.util.Random;
 public class Fast {
     public static void main(String[] args) {
 //        int[] nums = new int[]{2,3,1,99,34,23,999,345};
-        int[] nums = new int[]{10,20,15,0,6,7,2,1,-5,55};
+       // int[] nums = new int[]{10,20,15,0,15,7,2,1,-5,55};
+        int [] nums = new int[]{5,2,4,1,3,6,0};
         long start = System.nanoTime();
         fast(nums);
         System.out.println(Arrays.toString(nums));
@@ -30,7 +31,7 @@ public class Fast {
             }
             nums[left] = nums[right];
 
-            while(left < right && nums[left] < pivot){
+            while(left < right && nums[left] <= pivot){
                 left++;
             }
             nums[right] = nums[left];

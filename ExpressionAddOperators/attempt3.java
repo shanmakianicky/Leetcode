@@ -1,36 +1,26 @@
 package Leetcode.ExpressionAddOperators;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
-public class attempt2 {
+public class attempt3 {
     public static void main(String[] args) {
-        attempt2 a = new attempt2();
+        attempt3 a = new attempt3();
         System.out.println(a.addOperators("999999999",
                 81));
     }
     public List<String> addOperators(String num, int target) {
         char[] chars = num.toCharArray();
-        Set<List<Double>> s = new HashSet<>();
-        List<List<Double>> l = new ArrayList<>();
-        for (int i = 0; i < chars.length;i++){
-            List<List<Double>> poss = possibilities(new ArrayList<>(),new ArrayList<>(),chars,i);
-            for (List p : poss){
-                s.add(p);
-                l.add(p);
-            }
-        }
-        List<List<Double>> list = new ArrayList<>(s);
+        List<List<Double>> list = new ArrayList<>();
+        list = possibilities(list, new ArrayList<>(), chars, 0);
 
-        /*for(int i = 0; i < list.size(); i++){
-            if (list.get(i).size() == 6 && list.get(i).get(0)==999 && list.get(i).get(1)==9
-                    &&list.get(i).get(2)==9&&list.get(i).get(3)==99 && list.get(i).get(4)==9
-                    &&list.get(i).get(5) ==9){
-                list.get(i);
-            }
-        }*/
+//        for(int i = 0; i < list.size(); i++){
+//            if (list.get(i).size() == 6 && list.get(i).get(0)==999 && list.get(i).get(1)==9
+//                    &&list.get(i).get(2)==9&&list.get(i).get(3)==99 && list.get(i).get(4)==9
+//                    &&list.get(i).get(5) ==9){
+//                list.get(i);
+//            }
+//        }
 
         List<String> result = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
@@ -45,14 +35,14 @@ public class attempt2 {
                 }
             }
             /**
-            for (int j = 0; j < tempRes.size(); j++){
-                result.add(tempRes.get(j));
-            }
-            **/
+             for (int j = 0; j < tempRes.size(); j++){
+             result.add(tempRes.get(j));
+             }
+             **/
         }
         return result;
     }
-// 这个方法有问题。
+    // 这个方法有问题。
     private List<List<Double>> possibilities(List<List<Double>> list,
                                              List<String> possible,
                                              char[] chars,
