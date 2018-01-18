@@ -1,4 +1,4 @@
-package Leetcode.ASort;
+package Leetcode.ASort.Bubble;
 
 import java.util.Arrays;
 
