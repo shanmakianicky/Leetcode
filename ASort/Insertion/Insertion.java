@@ -1,4 +1,4 @@
-package Leetcode.ASort;
+package Leetcode.ASort.Insertion;
 
 import java.util.Arrays;
 
